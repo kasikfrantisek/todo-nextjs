@@ -1,6 +1,6 @@
 This is my practice project to show some bit of my knowledge.
 
-##Basic to do app
+## Basic to do app
 
 build in Next.js with Typescript
 authenticaion with nextAuth
