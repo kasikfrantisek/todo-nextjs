@@ -27,21 +27,20 @@ export default function Form() {
       securePage();
     }, []);
 
-    if(postId){
       useEffect(() => {
-        fetch(`/api/task/${postId}`)
-        .then(res => res.json())
-        .then((task) => {
-          setData(task.data);
-          reset(task.data)
-        })
-      },[]);
+        if(postId){
 
-    } else{
-      useEffect(()=>{
+          fetch(`/api/task/${postId}`)
+          .then(res => res.json())
+          .then((task) => {
+            setData(task.data);
+            reset(task.data)
+          })
+            
+      } else {
         setData(undefined);
-      }, [])
-    }
+      }
+    }, [])
     
     const send = async (d: FieldValues) => {
     
